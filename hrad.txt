@@ -1,0 +1,10 @@
+poloha nahoru doprava dolu doleva
+budova1 ulice2 ulice1 null null
+ulice1 namesti budova2 null budova1
+budova2 ulice3 null null ulice1
+ulice2 budova3 namesti budova1 null
+namesti ulice4 ulice3 ulice1 ulice2
+ulice3 budova4 null budova2 namesti
+budova3 null ulice4 ulice2 null
+ulice4 null budova4 namesti budova3
+budova4 null null ulice3 namesti

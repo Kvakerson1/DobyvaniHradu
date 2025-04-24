@@ -8,14 +8,36 @@ import java.util.ArrayList;
 public class HerniMapa {
 
     private static ArrayList<Lokace> mapa = new ArrayList<>();
-    private static String soucasnaLokace = "start";
+    private static String soucasnaLokace = "";
+    private static String lokaceNaMape = "hrad1";
     //nacte herni mapu ze souboru
-    public boolean NactiMapu(){
-        try (BufferedReader br = new BufferedReader(new FileReader("mapa.txt"))){
+    public boolean NactiMapu(int index){
+        String soubor;
+        mapa = new ArrayList<>();
+        switch (index){
+            case 1:
+                soubor = "mapa.txt";
+                break;
+            case 2:
+                soubor = "hrad.txt";
+                lokaceNaMape = soucasnaLokace;
+                break;
+            default:
+                return false;
+        }
+        try (BufferedReader br = new BufferedReader(new FileReader(soubor))){
             String line;
             while ((line = br.readLine()) != null) {
                 String[] lines = line.split(" ");
                 mapa.add(new Lokace(lines[0],lines[1],lines[2],lines[3],lines[4]));
+            }
+            switch (index){
+                case 1:
+                    soucasnaLokace = lokaceNaMape;
+                    break;
+                case 2:
+                    soucasnaLokace = "ulice1";
+                    break;
             }
             return true;
         }catch (IOException e){
