@@ -1,6 +1,7 @@
 package Konzole;
 
 import PrikazyHrad.Odejdi;
+import PrikazyHrad.PomocHrad;
 import PrikazyHradIMimoHrad.*;
 import PrikazyMimoHrad.Pomoc;
 import PrikazyMimoHrad.Vejdi;
@@ -26,6 +27,7 @@ public class Konzole {
         mapa.put("jih", new Jih());
         mapa.put("zapad", new Zapad());
         mapa.put("odejdi", new Odejdi());
+        mapa.put("pomoc", new PomocHrad());
         mapa.put("konec", new Konec());
     }
 
