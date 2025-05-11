@@ -97,4 +97,7 @@ public class HerniMapa {
         return soucasnaLokace;
     }
 
+    public String getLokaceNaMape() {
+        return lokaceNaMape;
+    }
 }
