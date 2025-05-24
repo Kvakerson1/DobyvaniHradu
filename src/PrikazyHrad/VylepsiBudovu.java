@@ -22,8 +22,9 @@ public class VylepsiBudovu extends Command {
                 return "Zde nestoji zadna budova";
             }
             Budova b = m.getBudova(Integer.parseInt(String.valueOf(h.getSoucasnaLokace().charAt(6))) - 1);
-            if (b.getCena()*8/10 <= inventar.getPenize()){
+            if (b.getCena() <= inventar.getPenize()){
                 b.zvysLvl();
+                inventar.odebraniPenez(b.getCena());
             }
         }
         return "Budova vylepsena";

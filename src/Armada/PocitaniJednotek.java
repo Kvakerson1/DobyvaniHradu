@@ -19,4 +19,15 @@ public class PocitaniJednotek {
     public void zvysPocet(){
         pocet++;
     }
+
+    public void snizPocet(int cislo){
+        pocet-=cislo;
+    }
+
+    public void setPocet(int pocet) {
+        this.pocet = pocet;
+    }
+    public int celkovaSila(){
+        return pocet * jednotka.getSila();
+    }
 }

@@ -2,10 +2,7 @@ package Konzole;
 
 import PrikazyHrad.*;
 import PrikazyHradIMimoHrad.*;
-import PrikazyMimoHrad.KonecTahu;
-import PrikazyMimoHrad.Pomoc;
-import PrikazyMimoHrad.Vejdi;
-import PrikazyMimoHrad.VylepsiDul;
+import PrikazyMimoHrad.*;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -23,6 +20,8 @@ public class Konzole {
         mapa.put("inventar", new VypisInventare());
         mapa.put("vylepsi", new VylepsiDul());
         mapa.put("konectahu", new KonecTahu());
+        mapa.put("zautoc", new Zautoc());
+        mapa.put("popis", new PopisMimoHrad());
         mapa.put("konec", new Konec());
     }
     public void inicializaceHrad(){

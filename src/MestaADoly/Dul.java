@@ -21,9 +21,6 @@ public class Dul {
         return nazev;
     }
 
-    public int getZakladniGenerace() {
-        return zakladniGenerace;
-    }
     public int getGeneruje(){
         return zakladniGenerace*lvl;
     }
@@ -33,5 +30,11 @@ public class Dul {
     }
     public void zvysLvl(){
         lvl += 1;
+    }
+
+    @Override
+    public String toString() {
+        return "nazev: " + nazev + "Generuje: " + getGeneruje();
+
     }
 }

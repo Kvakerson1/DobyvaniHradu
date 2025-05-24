@@ -20,6 +20,11 @@ public class Inventar {
     public  void setPenize(int penize) {
         penize = penize;
     }
+
+    public void setJednotky(ArrayList<Jednotka> jednotky) {
+        Inventar.jednotky = jednotky;
+    }
+
     public void odebraniPenez(int p){
         penize-=p;
     }
@@ -35,6 +40,10 @@ public class Inventar {
         return doly;
     }
 
+    public ArrayList<Jednotka> getJednotky() {
+        return jednotky;
+    }
+
     public void pridejMesto(Mesto m){
         mesta.add(m);
     }
@@ -44,17 +53,8 @@ public class Inventar {
     public void pridejJednotku(Jednotka j){
         jednotky.add(j);
     }
-    @Override
-    public String toString() {
-        String vypis = "";
-        vypis += "Peníze: " + penize + "\nVlastněná města: ";
-        for (int i = 0; i < mesta.size();i++){
-            vypis+= mesta.get(i).getNazev() + ", ";
-        }
-        vypis += "\nVlastněné doly: ";
-        for (int i = 0; i < doly.size();i++){
-            vypis+= doly.get(i).getNazev() + " " + doly.get(i).getGeneruje() + ", ";
-        }
+
+    public ArrayList<PocitaniJednotek> pocetJednotek(){
         ArrayList<PocitaniJednotek> pocetJednotek = new ArrayList<>();
         boolean bylPridan;
         for (int i = 0;i < jednotky.size();i++){
@@ -69,6 +69,20 @@ public class Inventar {
                 pocetJednotek.add(new PocitaniJednotek(jednotky.get(i)));
             }
         }
+        return pocetJednotek;
+    }
+    @Override
+    public String toString() {
+        String vypis = "";
+        vypis += "Peníze: " + penize + "\nVlastněná města: ";
+        for (int i = 0; i < mesta.size();i++){
+            vypis+= mesta.get(i).getNazev() + ", ";
+        }
+        vypis += "\nVlastněné doly: ";
+        for (int i = 0; i < doly.size();i++){
+            vypis+= doly.get(i).getNazev() + " " + doly.get(i).getGeneruje() + ", ";
+        }
+        ArrayList<PocitaniJednotek> pocetJednotek = pocetJednotek();
         vypis += "\nJednotky: ";
         for (int i = 0; i < pocetJednotek.size(); i++){
             vypis += "\ntyp: " + pocetJednotek.get(i).getJednotka().getNazev() + " pocet: " + pocetJednotek.get(i).getPocet() + " sila: " + pocetJednotek.get(i).getJednotka().getSila();

@@ -11,6 +11,11 @@ public class Jednotka {
         this.sila = sila;
     }
 
+    public Jednotka(String nazev, int sila) {
+        this.nazev = nazev;
+        this.sila = sila;
+    }
+
     public Jednotka() {
     }
 
