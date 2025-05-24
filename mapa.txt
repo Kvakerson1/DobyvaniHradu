@@ -1,7 +1,7 @@
 poloha nahoru doprava dolu doleva
 hrad1 louka1 null null dul1
 dul1 hrad2 hrad1 null louka2
-louka2 hrad3 dul1 null null
+louka2 dul2 dul1 null null
 louka1 null null hrad1 hrad2
-hrad2 null louka1 dul1 hrad3
-hrad3 null hrad2 louka2 null
+hrad2 null louka1 dul1 dul2
+dul2 null hrad2 louka2 null

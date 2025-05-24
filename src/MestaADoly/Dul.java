@@ -2,18 +2,18 @@ package MestaADoly;
 
 public class Dul {
     private String nazev;
-    private int generuje;
+    private int zakladniGenerace;
     private int lvl;
 
-    public Dul(String nazev, int generuje, int lvl) {
+    public Dul(String nazev, int zakladniGenerace, int lvl) {
         this.nazev = nazev;
-        this.generuje = generuje;
+        this.zakladniGenerace = zakladniGenerace;
         this.lvl = lvl;
     }
 
-    public Dul(String nazev, int generuje) {
+    public Dul(String nazev, int zakladniGenerace) {
         this.nazev = nazev;
-        this.generuje = generuje;
+        this.zakladniGenerace = zakladniGenerace;
         this.lvl = 1;
     }
 
@@ -21,23 +21,17 @@ public class Dul {
         return nazev;
     }
 
-    public void setNazev(String nazev) {
-        this.nazev = nazev;
+    public int getZakladniGenerace() {
+        return zakladniGenerace;
     }
-
-    public int getGeneruje() {
-        return generuje;
-    }
-
-    public void setGeneruje(int generuje) {
-        this.generuje = generuje;
+    public int getGeneruje(){
+        return zakladniGenerace*lvl;
     }
 
     public int getLvl() {
         return lvl;
     }
-
-    public void setLvl(int lvl) {
-        this.lvl = lvl;
+    public void zvysLvl(){
+        lvl += 1;
     }
 }

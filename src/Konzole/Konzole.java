@@ -1,12 +1,11 @@
 package Konzole;
 
-import PrikazyHrad.Odejdi;
-import PrikazyHrad.PomocHrad;
-import PrikazyHrad.Popis;
-import PrikazyHrad.Postav;
+import PrikazyHrad.*;
 import PrikazyHradIMimoHrad.*;
+import PrikazyMimoHrad.KonecTahu;
 import PrikazyMimoHrad.Pomoc;
 import PrikazyMimoHrad.Vejdi;
+import PrikazyMimoHrad.VylepsiDul;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -22,6 +21,8 @@ public class Konzole {
         mapa.put("pomoc", new Pomoc());
         mapa.put("vejdi", new Vejdi());
         mapa.put("inventar", new VypisInventare());
+        mapa.put("vylepsi", new VylepsiDul());
+        mapa.put("konectahu", new KonecTahu());
         mapa.put("konec", new Konec());
     }
     public void inicializaceHrad(){
@@ -34,6 +35,8 @@ public class Konzole {
         mapa.put("postav", new Postav());
         mapa.put("popis", new Popis());
         mapa.put("inventar", new VypisInventare());
+        mapa.put("vycvic", new Vycvic());
+        mapa.put("vylepsi", new VylepsiBudovu());
         mapa.put("konec", new Konec());
     }
 

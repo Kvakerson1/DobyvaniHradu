@@ -3,17 +3,13 @@ package MestaADoly;
 public class Budova {
     private String typBudovy;
     private String typJednotek;
+    private int cena;
     private int lvl;
 
-    public Budova(String typBudovy, String typJedntek, int lvl) {
+    public Budova(String typBudovy, String typJednotek, int cena) {
         this.typBudovy = typBudovy;
-        this.typJednotek = typJedntek;
-        this.lvl = lvl;
-    }
-
-    public Budova(String typBudovy, String typJedntek) {
-        this.typBudovy = typBudovy;
-        this.typJednotek = typJedntek;
+        this.typJednotek = typJednotek;
+        this.cena = cena;
         this.lvl = 1;
     }
 
@@ -43,6 +39,13 @@ public class Budova {
 
     @Override
     public String toString() {
-        return "Typ budovy " + typBudovy;
+        return "Typ budovy: " + typBudovy + "\nlvl: " + lvl;
+    }
+
+    public int getCena() {
+        return cena;
+    }
+    public void zvysLvl(){
+        lvl++;
     }
 }

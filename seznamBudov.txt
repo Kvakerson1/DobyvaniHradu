@@ -1,4 +1,3 @@
-cvicisteStrelcu 40, vyrobnaKatapultu 100, cvicisteJezdcu 60, cvicistePesaku 25
 cvicisteStrelcu strelec 40
 vyrobnaKatapultu katapult 100
 cvicisteJezdcu jezdec 60

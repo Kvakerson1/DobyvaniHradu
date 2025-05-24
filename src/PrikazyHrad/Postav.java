@@ -29,16 +29,23 @@ public class Postav extends Command {
             try (BufferedReader br = new BufferedReader(new FileReader("seznamBudov.txt"))){
                 System.out.println("Kterou budovu chcete postavit?");
                 String line;
-                line = br.readLine();
-                System.out.println(line);
+                String text = "";
+                while ((line = br.readLine()) != null) {
+                    String[] lines = line.split(" ");
+                    text += lines[0] + " " + lines[2] + ", ";
+                }
+                System.out.println(text);
                 Scanner sc = new Scanner(System.in);
                 String budova = sc.next();
-                while ((line = br.readLine()) != null) {
+                br.close();
+                BufferedReader br_ = new BufferedReader(new FileReader("seznamBudov.txt"));
+                while ((line = br_.readLine()) != null) {
                     String[] lines = line.split(" ");
                     if (lines[0].equals(budova)){
                         if (Integer.parseInt(lines[2]) < inventar.getPenize()){
                             inventar.odebraniPenez(Integer.parseInt(lines[2]));
-                            m.postavBudovu(Integer.parseInt(String.valueOf(h.getSoucasnaLokace().charAt(6)))-1, new Budova(lines[0],lines[1]));
+                            m.postavBudovu(Integer.parseInt(String.valueOf(h.getSoucasnaLokace().charAt(6)))-1, new Budova(lines[0],lines[1],Integer.parseInt(lines[2])));
+                            br_.close();
                             return "Budova postavena";
                         }else {
                             return "Nedostatek penez";

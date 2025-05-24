@@ -1,0 +1,4 @@
+strelec 10 3
+katapult 40 18
+jezdec 20 8
+pesak 5 1

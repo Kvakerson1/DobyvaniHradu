@@ -22,4 +22,8 @@ public class Doly {
         }
         return true;
     }
+
+    public ArrayList<Dul> getDoly() {
+        return doly;
+    }
 }
