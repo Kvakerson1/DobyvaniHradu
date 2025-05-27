@@ -12,7 +12,6 @@ public class NacteniObrany {
         Jednotky jednotky = new Jednotky();
         try (BufferedReader br = new BufferedReader(new FileReader("obrana.txt"))){
             String line;
-
             while ((line = br.readLine()) != null) {
 
                 String[] lines = line.split(" ");
