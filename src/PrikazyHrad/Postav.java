@@ -13,6 +13,10 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Postav extends Command {
+    /**
+     * postavi hracem vybranou budovu
+     * @return budova je postavena nebo duvod proc nelze postavit
+     */
     public  String execute(){
         HerniMapa h = new HerniMapa();
         Inventar inventar = new Inventar();

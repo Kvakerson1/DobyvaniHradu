@@ -6,6 +6,10 @@ import Mapa.HerniMapa;
 import MestaADoly.Mesto;
 
 public class Popis extends Command {
+    /**
+     * popise budovu u ktere hrac stoji
+     * @return budova u ktere hrac stoji
+     */
     public  String execute(){
         HerniMapa h = new HerniMapa();
         Inventar inventar = new Inventar();

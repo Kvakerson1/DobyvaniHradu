@@ -6,6 +6,10 @@ import Konzole.Konzole;
 import Mapa.HerniMapa;
 
 public class Vejdi extends Command {
+    /**
+     * vejde do hradu vlastneneho hracem
+     * @return duvod proc hrac nemuze vejit do hradu
+     */
     public  String execute(){
         HerniMapa herniMapa = new HerniMapa();
         Konzole k = new Konzole();

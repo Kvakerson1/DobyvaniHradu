@@ -12,6 +12,10 @@ import MestaADoly.Mesto;
 import java.util.Scanner;
 
 public class Vycvic extends Command {
+    /**
+     * metoda dava cvicit jednotky(pocet urci hrac)
+     * @return jednotky se cvici nebo duvod proc jednotky nejdou vycvicit
+     */
     public  String execute(){
         HerniMapa h = new HerniMapa();
         Inventar inventar = new Inventar();

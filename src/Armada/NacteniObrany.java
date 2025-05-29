@@ -8,6 +8,10 @@ import java.util.ArrayList;
 public class NacteniObrany {
     private static ArrayList<Obrana> obrana = new ArrayList<>();
 
+    /**
+     * Nacte ze souboru jednotky co brani jednotlive budovy
+     * @return je obrana nactena?
+     */
     public boolean nacteniObrany(){
         Jednotky jednotky = new Jednotky();
         try (BufferedReader br = new BufferedReader(new FileReader("obrana.txt"))){
@@ -33,6 +37,11 @@ public class NacteniObrany {
         return obrana;
     }
 
+    /**
+     * vypise jednotky na dane lokaci ve formatu: celkovy pocet, typ jednotky
+     * @param lokace lokace ze ktere se ma vypsat
+     * @return seznam jednotek
+     */
     public ArrayList<PocitaniJednotek> vypis(String lokace){
         ArrayList<PocitaniJednotek> pocetJednotek = new ArrayList<>();
         boolean bylPridan;

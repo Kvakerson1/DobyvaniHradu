@@ -5,6 +5,10 @@ import Konzole.Command;
 import Mapa.HerniMapa;
 
 public class VylepsiDul extends Command {
+    /**
+     * vylepsi dul na hracove lokaci
+     * @return Dul vylepsen nebo duvod proc dul nejde vylepsit
+     */
     public  String execute(){
         HerniMapa h = new HerniMapa();
         Inventar inventar = new Inventar();

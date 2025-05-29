@@ -14,6 +14,10 @@ public class Jednotky {
 
     private static ArrayList<BudovyVeKterychSeCvici> budovy = new ArrayList<>();
 
+    /**
+     * Metoda co nacte jednotky ze souboru
+     * @return doslo k chybe?
+     */
     public boolean nacteniJednotky(){
         try (BufferedReader br = new BufferedReader(new FileReader("jednotky.txt"))){
             String line;
@@ -30,6 +34,12 @@ public class Jednotky {
     public ArrayList<Jednotka> getJednotky() {
         return jednotky;
     }
+
+    /**
+     * metoda na pridani jednotky do arraylistu
+     * @param j jednotka co má byt pridana
+     * @return byla jednotka pridana?
+     */
     public boolean pridatJednotkuNaVycvik(Jednotka j){
         try {
             vycvik.add(j);

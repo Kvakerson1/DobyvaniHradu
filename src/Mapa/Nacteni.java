@@ -3,10 +3,14 @@ package Mapa;
 import Armada.Jednotky;
 import Armada.NacteniObrany;
 import Hrac.Inventar;
+import Konzole.Konzole;
 import MestaADoly.Doly;
 import MestaADoly.Mesto;
 
 public class Nacteni {
+    /**
+     * nacte vse co je potreba na zacatku hry
+     */
     public void nacteni(){
         HerniMapa herniMapa = new HerniMapa();
         herniMapa.NactiMapu(1);
@@ -20,12 +24,8 @@ public class Nacteni {
         inventar.pridejDul(d.getDoly().get(0));
         NacteniObrany o = new NacteniObrany();
         o.nacteniObrany();
-        for (int i = 0;i < 10; i++){
-            inventar.pridejJednotku(j.getJednotky().get(0));
-        }
-        for (int i = 0;i < 10; i++){
-            inventar.pridejJednotku(j.getJednotky().get(2));
-        }
         System.out.println(herniMapa.vypisSoucasnePolohy());
+        Konzole k = new Konzole();
+        k.start();
     }
 }

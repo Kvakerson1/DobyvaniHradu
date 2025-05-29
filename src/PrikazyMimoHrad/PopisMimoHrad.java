@@ -9,6 +9,10 @@ import Mapa.HerniMapa;
 import java.util.ArrayList;
 
 public class PopisMimoHrad extends Command {
+    /**
+     * vypise co se naleza na dane lokaci
+     * @return co se naleza na dane lokaci
+     */
     public  String execute(){
         HerniMapa h = new HerniMapa();
         Inventar inventar = new Inventar();

@@ -12,6 +12,10 @@ import MestaADoly.Mesto;
 import java.util.ArrayList;
 
 public class Zautoc extends Command {
+    /**
+     * metoda pro souboj
+     * @return kdo vyhral nebo duvod proc se souboj neuskutecnil
+     */
     public  String execute(){
         HerniMapa h = new HerniMapa();
         Inventar inventar = new Inventar();

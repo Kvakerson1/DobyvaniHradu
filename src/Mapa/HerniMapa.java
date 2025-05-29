@@ -10,7 +10,12 @@ public class HerniMapa {
     private static ArrayList<Lokace> mapa = new ArrayList<>();
     private static String soucasnaLokace = "";
     private static String lokaceNaMape = "hrad1";
-    //nacte herni mapu ze souboru
+
+    /**
+     * nacte herni mapu ze souboru
+     * @param index mapa kterou ma nacist(1 mapa sveta, 2 mapa hradu)
+     * @return nacetla se mapa?
+     */
     public boolean NactiMapu(int index){
         String soubor;
         mapa = new ArrayList<>();
@@ -44,7 +49,12 @@ public class HerniMapa {
             return false;
         }
     }
-    //posune hrace danym smerem
+
+    /**
+     * posune hrace zadanym smerem
+     * @param smer smer kterym se ma posunout
+     * @return posunul se hrac?
+     */
     public boolean posun(int smer){
         Lokace lokace = new Lokace();
         for (int i = 0; i < mapa.size();i++){
@@ -84,7 +94,11 @@ public class HerniMapa {
         }
         return false;
     }
-    //vypise soucasnou polohu
+
+    /**
+     * vypise soucasnou polohu
+     * @return soucasna poloha
+     */
     public String vypisSoucasnePolohy(){
         for (int i = 0; i< mapa.size();i++){
             if (mapa.get(i).getNazevLokace().equals(soucasnaLokace)){

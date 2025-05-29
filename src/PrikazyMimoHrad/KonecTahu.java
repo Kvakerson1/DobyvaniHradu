@@ -7,7 +7,10 @@ import Konzole.Command;
 import java.util.ArrayList;
 
 public class KonecTahu extends Command {
-
+    /**
+     *udela vse co je potreba udelat na konci tahu
+     * @return Tah ukoncen
+     */
     public  String execute(){
         Inventar inventar = new Inventar();
         Jednotky jednotky = new Jednotky();

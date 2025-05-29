@@ -54,6 +54,11 @@ public class Inventar {
         jednotky.add(j);
     }
 
+    /**
+     * vypise jednotky vlastnene hracem ve formatu: celkovy pocet, typ jednotky
+     * @return seznam jednotek
+     */
+
     public ArrayList<PocitaniJednotek> pocetJednotek(){
         ArrayList<PocitaniJednotek> pocetJednotek = new ArrayList<>();
         boolean bylPridan;
@@ -71,6 +76,11 @@ public class Inventar {
         }
         return pocetJednotek;
     }
+
+    /**
+     * vypis inventare
+     * @return vypis
+     */
     @Override
     public String toString() {
         String vypis = "";

@@ -8,6 +8,10 @@ import MestaADoly.Budova;
 import MestaADoly.Mesto;
 
 public class VylepsiBudovu extends Command {
+    /**
+     * metoda vylepsi danou budovu
+     * @return Budova vylepsena nebo duvod proc budova nelze vylepsit
+     */
     public  String execute(){
         HerniMapa h = new HerniMapa();
         Inventar inventar = new Inventar();
@@ -25,6 +29,9 @@ public class VylepsiBudovu extends Command {
             if (b.getCena() <= inventar.getPenize()){
                 b.zvysLvl();
                 inventar.odebraniPenez(b.getCena());
+            }
+            else {
+                return "Nedostatek penez";
             }
         }
         return "Budova vylepsena";

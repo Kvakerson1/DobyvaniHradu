@@ -10,6 +10,10 @@ import java.util.ArrayList;
 public class Doly {
     private static ArrayList<Dul> doly = new ArrayList<>();
 
+    /**
+     * Nacte doly a kolik generuji ze souboru
+     * @return byly doly nacteny uspesne?
+     */
     public boolean nacteniDolu(){
         try (BufferedReader br = new BufferedReader(new FileReader("doly.txt"))){
             String line;

@@ -1,7 +1,6 @@
 package Mapa;
 
 public class Lokace {
-    //nazev lokace + nazvy sousednich lokaci
     private String nazevLokace;
     private String sever;
     private String vychod;
